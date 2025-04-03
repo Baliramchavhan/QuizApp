@@ -68,8 +68,8 @@ function Quiz() {
     });
    
    alert(score >= 40 
-      ? ` <p className="result-message"> 🎉 Congratulations! You passed with ${newScore} points!</p>` 
-      : ` <p className="result-message">😞 You scored ${newScore} points. Better luck next time!</p>`);
+      ? `🎉 Congratulations! You passed with ${newScore} points!` 
+      : `😞 You scored ${newScore} points. Better luck next time!`);
     
   setIsDisabled(true);
   setTimeout(() => setIsDisabled(false), 1 * 60 * 1000);
