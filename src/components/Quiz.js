@@ -104,7 +104,7 @@ function Quiz() {
           <button type="button" disabled={currentIndex === 0} onClick={prevQuestions}>Previous</button>
           <button type="button" disabled={currentIndex + 4 >= questions.length} onClick={nextQuestions}>Next</button>
         </div>
-       <button id="submitBtn" onClick={submitQuiz} disabled={isDisabled}>
+       <button class="submitBtn" onClick={submitQuiz} disabled={isDisabled}>
                 Submit Quiz
             </button>
       </form>
