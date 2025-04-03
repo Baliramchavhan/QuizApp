@@ -66,7 +66,14 @@ function Quiz() {
         newScore += 2;
       }
     });
-    setScore(newScore);
+    <pclassName="result-message">
+   alert(score >= 40 
+      ? `🎉 Congratulations! You passed with ${newScore} points!` 
+      : `😞 You scored ${newScore} points. Better luck next time!`);
+    </p>
+  setIsDisabled(true);
+  setTimeout(() => setIsDisabled(false), 1 * 60 * 1000);
+
   }
 
   return (
@@ -97,13 +104,11 @@ function Quiz() {
           <button type="button" disabled={currentIndex === 0} onClick={prevQuestions}>Previous</button>
           <button type="button" disabled={currentIndex + 4 >= questions.length} onClick={nextQuestions}>Next</button>
         </div>
-        <button type="submit" className="submit-btn" onClick={submitQuiz}>Submit Quiz</button>
+       <button id="submitBtn" onClick={submitQuiz} disabled={isDisabled}>
+                Submit Quiz
+            </button>
       </form>
-      {score !== null && (
-        <p className="result-message">
-          {score >= 40 ? `🎉 Congratulations! You passed with ${score} points!` : `😞 You scored ${score} points. Better luck next time!`}
-        </p>
-      )}
+    
     </div>
   );
 }
